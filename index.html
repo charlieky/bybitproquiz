@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finelo</title>
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" />
+
+    <!-- chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- stylesheet here -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container innerHeader">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 text-center">
+                    <div class="logoArea">
+                        <a href="/index.html"> <img src="assets/images/logo.svg" alt="" width="84px"></a>
+                    </div>
+                </div>
+                <div class="col-4 text-end">
+                    <div class="toggleBtnArea">
+                        <img class="toggleBtn" src="assets/images/menu.svg" alt="" width="24px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menuPanel">
+            <div class="panelCloseArea text-end">
+                <img class="menuPanelClose" src="assets/images/close.svg" alt="" width="24px">
+            </div>
+            <div class="innerPanel">
+                <ul>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#"> Subscription Terms</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Support Center</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <form class="container form quizForm" id="quizForm">
+            <!-- Step 1 tradingChallenge start -->
+            <div class="step active tradingChallenge" id="step1">
+                <div class="tcTop">
+                    <div class="userChoice">
+                        <div class="imgArea">
+                            <img src="assets/images/Users choice.webp" alt="">
+                        </div>
+                        <div class="contentArea">
+                            <p>1M+ users’ choice</p>
+                            <h6>Learned new skills</h6>
+                        </div>
+                    </div>
+                    <div class="ratedOnTrustpilot">
+                        <div class="imgArea">
+                            <img src="assets/images/Frame rated on trustpilot-1.webp" alt="">
+                        </div>
+                        <div class="contentArea">
+                            <p>Rated on Trustpilot</p>
+                            <h6>4.6 Satisfaction Score</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imgeBoxArea">
+                    <div class="imgBox">
+                        <div class="imgArea">
+                            <img src="assets/images/Image-1.webp" alt="" width="100%">
+                        </div>
+                        <div class="contentArea mt-4 mb-4">
+                            <h2 class="text-center">28-DAY TRADING CHALLENGE</h2>
+                            <p class="text-center">Have you ever traded before?</p>
+                        </div>
+                        <div class="btnArea">
+                            <a href="#ageArea" class="btn" onclick="nextStepMain(1)">YES <img
+                                    src="assets/images/arrow-right.svg" alt=""></a>
+                            <a href="#ageArea" class="btn" onclick="nextStepMain(1)">NO <img
+                                    src="assets/images/arrow-right.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tcBottom">
+                    <p class="text-center mt-4">By proceeding, you agree with <a href="#">Terms and Conditions</a>, <a
+                            href="#">Privacy Policy</a>, <a href="#">Subscription Terms</a></p>
+                    <p class="text-center">FINELO LIMITED, Limassol, Cyprus</p>
+                </div>
+
+
+            </div>
+            <!-- Step 1 tradingChallenge close -->
+
+            <!-- Step 2 ageArea start -->
+            <div class="step ageArea" id="step2">
+                <div class="innerAgeArea">
+                    <div class="ageTop">
+                        <h3 class="text-center">What is your age?</h3>
+                        <p class="text-center">We will personalize your Trading Challenge based on your answers</p>
+
+                        <div class="ageSelect">
+                            <a href="#" class="btn" onclick="nextStepMain(2)">18-24</a>
+                            <a href="#" class="btn" onclick="nextStepMain(2)">25-34</a>
+                            <a href="#" class="btn" onclick="nextStepMain(2)">35-44</a>
+                            <a href="#" class="btn" onclick="nextStepMain(2)">45+</a>
+                        </div>
+                    </div>
+
+                    <div class="ageBottom">
+                        <img src="assets/images/man-smiling.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Step 2 ageArea close -->
+
+            <!-- Step 3 useArea start-->
+            <div class="step useArea" id="step3">
+                <div class="innerUseArea">
+                    <div class="useTop mt-3">
+                        <h2 class="text-center">1 000 000+ people</h2>
+                        <p class="text-center">already use Finelo</p>
+                        <div class="card testimonial">
+                            <div class="cardTop">
+                                <p class="text-center">A good trader is someone who manages to make money while limiting
+                                    risk.</p>
+                            </div>
+                            <div class="cardBottom text-center">
+                                <img src="assets/images/author.webp" alt="">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="brandArea text-center mt-3">
+                            <h4>Trading strategies mentioned in</h4>
+                            <div class="brands">
+                                <img src="assets/images/social_proof_mentioned_in.webp" width="100%" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="useBottom text-center">
+                        <a href="#" onclick="nextStepMain(3)" class="btn">Continue</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 3 useArea close-->
+
+            <!-- Step 4  nested form start-->
+            <div class="step nestedMultiformMain" id="step4">
+                <div id="nestedForm" class="nestedForm">
+                    <!-- Nested Step 1 -->
+                    <div class="nestedStep active" id="nestedStep1">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(1)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">1</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">What is your main goal?</h4>
+                            <div class="buttonArea">
+                                <a href="#" class="btn" onclick="nextStepNested(1)">
+                                    <img src="assets/images/doller.webp" alt="">
+                                    <span class="btnText">Grow wealth</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(1)">
+                                    <img src="assets/images/02-29.webp" alt="">
+                                    <span class="btnText">Passive income</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(1)">
+                                    <img src="assets/images/03-28.webp" alt="">
+                                    <span class="btnText">Financial independence</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(1)">
+                                    <img src="assets/images/04-19.webp" alt="">
+                                    <span class="btnText">Be my own boss</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(1)">
+                                    <img src="assets/images/03-27.webp" alt="">
+                                    <span class="btnText">Retire wealthy</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(1)">
+                                    <img src="assets/images/05-12.webp" alt="">
+                                    <span class="btnText">Travel the world</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nested Step 2 -->
+                    <div class="nestedStep" id="nestedStep2">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(2)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">2</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">What income source are
+                                you most familiar with?</h4>
+                            <div class="buttonArea">
+                                <a href="#" class="btn" onclick="nextStepNested(2)">
+                                    <img src="assets/images/full-time job.webp" alt="">
+                                    <span class="btnText">Full-time job</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(2)">
+                                    <img src="assets/images/passive-income-chart.webp" alt="">
+                                    <span class="btnText">Passive income</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(2)">
+                                    <img src="assets/images/others.webp" alt="">
+                                    <span class="btnText">Other</span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nested Step 3 -->
+                    <div class="nestedStep" id="nestedStep3">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(3)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">3</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">How do you feel about your
+                                financial situation?</h4>
+                            <div class="buttonArea">
+                                <a href="#" class="btn" onclick="nextStepNested(3)">
+                                    <img src="assets/images/comfort.webp" alt="">
+                                    <span class="btnText">I'm comfortable</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(3)">
+                                    <img src="assets/images/stability.webp" alt="">
+                                    <span class="btnText">I would like to have more stability</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(3)">
+                                    <img src="assets/images/financial-goals.webp" alt="">
+                                    <span class="btnText">I'm struggling to meet my financial goals</span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nested Step 4 news notice area -->
+                    <div class="nestedStep newsNotice" id="nestedStep4">
+
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="innerNewsNotice">
+                            <div class="newsNoticeTop mt-3">
+                                <img src="assets/images/ed_phone_mountains.webp" width="100%" alt="">
+                                <h3 class="text-start">Great news! We can help you to get to the next level
+                                </h3>
+                                <p class="text-start">Our challenge is backed by thousands of research hours and content
+                                    carefully crafted for your needs and skills!</p>
+                            </div>
+
+                            <div class="newsNoticeBottom text-center">
+                                <a href="#continue" onclick="nextStepNested(4)" class="btn">Continue</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Nested Step 5 -->
+                    <div class="nestedStep" id="nestedStep5">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(5, 2)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">4</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">Do you want to retire wealthy?</h4>
+                            <div class="buttonArea">
+                                <a href="#" class="btn" onclick="nextStepNested(5)">
+                                    <img src="assets/images/comfort.webp" alt="">
+                                    <span class="btnText"> I'm already retired</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(5)">
+                                    <img src="assets/images/dont-know.webp" alt="">
+                                    <span class="btnText">Yes, but I don't know how</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(5)">
+                                    <img src="assets/images/retirement.webp" alt="">
+                                    <span class="btnText">I haven't thought about retirement</span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Nested Step 6 -->
+                    <div class="nestedStep" id="nestedStep6">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(6)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">5</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">How confident are you about your financial future?</h4>
+                            <div class="buttonArea">
+                                <a href="#" class="btn" onclick="nextStepNested(6)">
+                                    <img src="assets/images/comfort.webp" alt="">
+                                    <span class="btnText">Very confident</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(6)">
+                                    <img src="assets/images/financial-goals.webp" alt="">
+                                    <span class="btnText">Somewhat confident</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(6)">
+                                    <img src="assets/images/stability.webp" alt="">
+                                    <span class="btnText">Not confident at all</span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nested Step 7 news notice area -->
+                    <div class="nestedStep newsNotice" id="nestedStep7">
+
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="innerNewsNotice">
+                            <div class="newsNoticeTop mt-3">
+                                <img src="assets/images/ed_guide_mountains.webp" width="100%" alt="">
+                                <h3 class="text-start">We are glad to hear this!</h3>
+                                <p class="text-start">According to the survey by Capital One, only 23% of people feel
+                                    confident about their future. However, many people tend to stay on the same
+                                    financial level for decades, because they lack knowledge how to go further. We will
+                                    come up with several paths to a better financial future based on your answers.</p>
+                            </div>
+
+                            <div class="newsNoticeBottom text-center">
+                                <a href="#continue" onclick="nextStepNested(7)" class="btn">Continue</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Nested Step 8 -->
+                    <div class="nestedStep" id="nestedStep8">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(8, 2)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">6</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">Do you feel FOMO (Fear of missing out) when you see others making
+                                money?</h4>
+                            <div class="buttonArea">
+                                <a href="#" class="btn" onclick="nextStepNested(8)">
+                                    <img src="assets/images/retirement.webp" alt="">
+                                    <span class="btnText">Yes, all the time</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(8)">
+                                    <img src="assets/images/financial-goals.webp" alt="">
+                                    <span class="btnText">Sometimes</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(8)">
+                                    <img src="assets/images/comfort.webp" alt="">
+                                    <span class="btnText">Rarely</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(8)">
+                                    <img src="assets/images/04-19.webp" alt="">
+                                    <span class="btnText">Not at all</span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nested Step 9 -->
+                    <div class="nestedStep" id="nestedStep9">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(9, 1)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">7</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">Do you know anything about trading?</h4>
+                            <div class="buttonArea">
+                                <a href="#" class="btn" onclick="nextStepNested(9)">
+                                    <img src="assets/images/improve.webp" alt="">
+                                    <span class="btnText">I'm experienced, but want to improve</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(9)">
+                                    <img src="assets/images/others.webp" alt="">
+                                    <span class="btnText">I’ve heard a thing or two</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(9)">
+                                    <img src="assets/images/want to know.webp" alt="">
+                                    <span class="btnText">No, but I’d like to know</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nested Step 10 -->
+                    <div class="nestedStep" id="nestedStep10">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(10)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">8</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">What scares you the most about trading?</h4>
+                            <div class="buttonArea">
+                                <a href="#" class="btn" onclick="nextStepNested(10)">
+                                    <img src="assets/images/losing-money.webp" alt="">
+                                    <span class="btnText">Losing money</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(10)">
+                                    <img src="assets/images/not-know-inveting.webp" alt="">
+                                    <span class="btnText">Not knowing what to invest in</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(10)">
+                                    <img src="assets/images/retirement.webp" alt="">
+                                    <span class="btnText">Fear of missing out (FOMO)</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(10)">
+                                    <img src="assets/images/complicated.webp" alt="">
+                                    <span class="btnText">It’s too complicated for me</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nested Step 11 -->
+                    <div class="nestedStep" id="nestedStep11">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(11)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">9</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">Which trading topic interests you the most?</h4>
+                            <div class="buttonArea">
+                                <a href="#" class="btn" onclick="nextStepNested(11)">
+                                    <img src="assets/images/watch.webp" alt="">
+                                    <span class="btnText">Right time to sell and buy</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(11)">
+                                    <img src="assets/images/search.webp" alt="">
+                                    <span class="btnText">Different asset types</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(11)">
+                                    <img src="assets/images/weight detector.webp" alt="">
+                                    <span class="btnText">Risks and rewards</span>
+                                </a>
+                                <a href="#" class="btn" onclick="nextStepNested(11)">
+                                    <img src="assets/images/others.webp" alt="">
+                                    <span class="btnText">I’m not sure yet</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nested Step 12 news notice area -->
+                    <div class="nestedStep newsNotice" id="nestedStep12">
+
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="innerNewsNotice">
+                            <div class="newsNoticeTop mt-3">
+                                <img src="assets/images/we-have-got-you.webp" width="100%" alt="">
+                                <h3 class="text-start">We’ve Got You!</h3>
+                                <p class="text-start">From fundamentals to advanced strategies, we cover it all. Our
+                                    step-by-step challenge adapts to your skills and knowledge, helping you gain
+                                    confidence and master trading in just a few weeks. Let’s make your trading journey
+                                    simple and successful!</p>
+                            </div>
+
+                            <div class="newsNoticeBottom text-center">
+                                <a href="#" onclick="nextStepNested(12)" class="btn">Continue</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Nested Step 13 -->
+                    <div class="nestedStep" id="nestedStep13">
+                        <!-- step header start -->
+                        <div class="stepHeader">
+                            <div class="innerStepHeader">
+                                <div class="row">
+                                    <div class="col-4 text-start">
+                                        <button type="button" onclick="prevStepNested(13, 2)"><img
+                                                src="assets/images/gray-arrow.svg" alt=""></button>
+
+                                    </div>
+                                    <div class="col-4 text-center">
+                                        <div class="logoArea">
+                                            <a href="/index.html"> <img src="assets/images/logo.svg" alt=""
+                                                    width="84px"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 text-end">
+                                        <div class="stepCounter">
+                                            <span class="currentStepCount">10</span>
+                                            <span class="stepCounterDivider">/</span>
+                                            <span class="totalStepCount">17</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Bar for Nested Form -->
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <!-- step header close -->
+
+                        <div class="stepBody">
+                            <h4 class="text-center">Which companies are you most interested in?</h4>
+                            <p class="text-center subtitle mt-2 mb-2">Choose all that apply</p>
+                            <div class="buttonArea companySelectArea">
+                                <div id="options" class="text-center mb-4">
+                                    <div class="company-option" data-value="netflix"><img
+                                            src="assets/images/netflix.webp" alt=""> <span>Netflix</span></div>
+                                    <div class="company-option" data-value="tesla"><img src="assets/images/tesla.webp"
+                                            alt=""> <span>Tesla</span></div>
+                                    <div class="company-option" data-value="apple"><img src="assets/images/apple.webp"
+                                            alt=""> <span>Apple</span></div>
+                                    <div class="company-option" data-value="amazon"><img src="assets/images/amazon.webp"
+                                            alt=""> <span>Amazon</span></div>
+                                    <div class="company-option" data-value="mcdonalds"><img
+                                            src="assets/images/mcDonald.webp" alt=""> <span>McDonald's</span></div>
+                                    <div class="company-option" data-value="shell"><img src="assets/images/shell.webp"
+                                            alt=""> <span>Shell</span></div>
+                                    <div class="company-option" data-value="exxon"> <img src="assets/images/exxon.webp"
+                                            alt=""> <span>Exxon</span></div>
+                                    <div class="company-option" data-value="microsoft"><img
+                                            src="assets/images/microsoft.webp" alt=""> <span>Microsoft</span></div>
+                                    <div class="company-option" data-value="google"><img src="assets/images/google.webp"
+                                            alt=""> <span>Google</span></div>
+                                    <div class="company-option" data-value="pfizer"><img src="assets/images/pfizer.webp"
+                                            alt=""> <span>Pfizer</span></div>
+                                </div>
+                                <div class="newsNoticeBottom mt-5 text-center">
+                                    <button onclick="nextStepMain(4)" class="btn nextStepBtn text-center">Next
+                                        Step</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- step 4 nested form close -->
+
+            <!-- Step 4 newsletter area start-->
+            <div class="step newsletterArea" id="step5">
+                <div class="innerNewsletter">
+                    <div class="stepBody text-center">
+                        <h4 class="text-center mt-4 mb-4">
+                            Enter your email to get your <span>Personal Trading</span> Challenge!
+                        </h4>
+                        <div class="innerStepBody">
+                            <div class="inputArea">
+                                <img class="evelopeImg" src="assets/images/envelop.svg" width="20px" alt="">
+                                <input type="email" id="emailInput" placeholder="Your email">
+                                <img id="warningIcon" class="warningImg hidden" src="assets/images/warning.svg"
+                                    width="20px" alt="">
+                                <img id="successIcon" class="successIcon hidden"
+                                    src="assets/images/green-chekc-mark.svg" width="20px" alt="">
+                            </div>
+                            <span id="messageText" class="noticeText text-start hidden"></span>
+                        </div>
+
+                        <div class="tosArea text-start mt-3">
+                            <img src="assets/images/lock.svg" width="20px" alt="">
+                            <p>
+                                We respect your privacy and are committed to protecting your personal data.
+                                Your data will be processed in accordance with our <a href="#">Privacy Policy.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="useBottom text-center">
+                        <button id="continueBtnNewsLetter" class="btn" onclick="nextStepMain(5)"
+                            disabled>Continue</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Step 4 newsletter area start-->
+
+
+            <!-- Step 5 tradingSkill area start-->
+            <div class="step tradingSkill" id="step6">
+                <div class="innerTradingSkill">
+                    <div class="stepBody">
+                        <h4 class="text-start mt-4 mb-4">
+                            Your trading skills level</h4>
+                        <canvas id="tradingChart" class="bg-white mb-4"></canvas>
+                        <span class="mt-5">The chart is for illustrative purposes only</span>
+
+                    </div>
+                    <div class="useBottom text-center">
+                        <h4 class="text-start mb-5">Your 28-Day Trading Challenge is ready!</h4>
+                        <a href="selling-page.html" id="continueBtn" onclick="nextStepMain(7)" class="btn">Continue</a>
+                    </div>
+                </div>
+            </div>
+            <!-- step 5 tradingSkill area close -->
+
+
+
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+
+    <!-- javascript start -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+
+</body>
+
+</html>
